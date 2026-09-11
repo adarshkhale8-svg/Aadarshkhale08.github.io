@@ -111,7 +111,68 @@
     scroll-behavior:smooth;
     font-family:Arial,Helvetica,sans-serif;
 }
+<script>
 
+function openCalculator(){
+
+    document.getElementById("calculatorPopup").style.display = "flex";
+
+}
+
+
+function closeCalculator(){
+
+    document.getElementById("calculatorPopup").style.display = "none";
+
+}
+
+
+function addValue(value){
+
+    document.getElementById("display").value += value;
+
+}
+
+
+function clearDisplay(){
+
+    document.getElementById("display").value = "";
+
+}
+
+
+function calculate(){
+
+    let display = document.getElementById("display");
+
+    try{
+
+        display.value = eval(display.value);
+
+    }
+    catch{
+
+        display.value = "Error";
+
+    }
+
+}
+
+
+function openPercentage(){
+
+    alert("Percentage Calculator is opening!");
+
+}
+
+
+function openMusic(){
+
+    alert("Music Player is opening!");
+
+}
+
+</script>
 body{
     background:#030712;
     color:white;
